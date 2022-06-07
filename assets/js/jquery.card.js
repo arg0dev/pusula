@@ -135,13 +135,13 @@ var card =
 	    },
 	    messages: {
 	      validDate: 'valid\nthru',
-	      monthYear: 'month/year'
+	      monthYear: 'AY/YIL'
 	    },
 	    placeholders: {
 	      number: '&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull;',
 	      cvc: '&bull;&bull;&bull;',
 	      expiry: '&bull;&bull;/&bull;&bull;',
-	      name: 'Full Name'
+	      name: 'Ad Soyad'
 	    },
 	    masks: {
 	      cardNumber: false

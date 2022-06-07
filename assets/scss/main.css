@@ -134,6 +134,10 @@
 }
 
 /* Specified Classes */
+* p {
+  font-family: "Montserrat", sans-serif;
+}
+
 * a {
   color: #fff;
   text-decoration: none !important;
@@ -182,6 +186,11 @@ body .header .title h1 {
   font-family: "Neue Haas Grotesk Display Pro";
   font-size: 56px;
   font-weight: 600;
+}
+
+body .header .title .highlight {
+  border-bottom: #EC261A solid 5px;
+  color: #232C44;
 }
 
 body .header .abstract p {
@@ -326,6 +335,17 @@ body .navbar {
   background-color: rgba(0, 0, 0, 0.25);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+body .navbar .submiter {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 22px;
+  background: #171F33;
+  border: none !important;
+  color: #fff;
 }
 
 body .navbar .navbar-brand img {
@@ -1161,6 +1181,11 @@ body .modal .modal-content {
   border-radius: 0;
 }
 
+body .modal .modal-content .col-4 {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 body .modal a {
   color: #000;
 }
@@ -1182,7 +1207,9 @@ body .modal .col-xl-7 ::-webkit-scrollbar-thumb:hover {
   background: #171F33;
 }
 
-body .modal .col-xl-7 h2, body .modal .col-xl-7 h3, body .modal .col-xl-7 h4,
+body .modal .col-xl-7 h2,
+body .modal .col-xl-7 h3,
+body .modal .col-xl-7 h4,
 body .modal .col-xl-7 h5 {
   font-family: "Neue Haas Grotesk Display Pro";
   font-weight: 600;
@@ -1219,6 +1246,296 @@ body .modal .col-xl-7 .service-brands img {
           filter: initial !important;
 }
 
+body .inPage {
+  position: relative;
+}
+
+body .inPage .search-content {
+  border-top: solid 1px #F6F6F6;
+  padding-top: 1em;
+}
+
+body .inPage .product-details {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+  text-align: end;
+}
+
+body .inPage .saleteam .col-xl-4 {
+  position: relative;
+  overflow: hidden;
+}
+
+body .inPage .saleteam .name {
+  overflow: hidden;
+  background: #171F33;
+  width: 75%;
+  position: absolute;
+  bottom: 0px;
+  padding: 1.5em;
+}
+
+body .inPage .saleteam .name h1 {
+  font-weight: 600;
+  font-family: "Neue Haas Grotesk Display Pro";
+  color: #fff;
+}
+
+body .inPage .saleteam .name .r-line {
+  max-width: 100px;
+  height: 3px;
+  opacity: 1;
+  background: #EC261A;
+  border-color: #EC261A;
+  position: relative;
+  top: -10px;
+  right: 0;
+  margin: 0 !important;
+}
+
+body .inPage .saleteam .personal {
+  position: absolute;
+  top: 25px;
+  left: 15px;
+}
+
+body .inPage .saleteam .personal .btn-red span {
+  font-size: 17px;
+  top: -1px;
+  position: relative;
+}
+
+body .inPage .saleteam .personal .btn-red img {
+  z-index: 999;
+  width: 20px !important;
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
+  top: -3px;
+  left: 1px;
+  position: relative;
+  height: auto;
+  opacity: 1 !important;
+}
+
+body .inPage .white-bg {
+  background: #fff !important;
+  top: -220px;
+  position: relative;
+  z-index: 1;
+}
+
+body .inPage .white-bg ::-webkit-scrollbar {
+  width: 5px;
+}
+
+body .inPage .white-bg ::-webkit-scrollbar-button {
+  height: 10px;
+}
+
+body .inPage .white-bg ::-webkit-scrollbar-track {
+  background: #F6F6F6;
+}
+
+body .inPage .white-bg ::-webkit-scrollbar-thumb {
+  background: #232C44;
+}
+
+body .inPage .white-bg ::-webkit-scrollbar-thumb:hover {
+  background: #171F33;
+}
+
+body .inPage .prodbox {
+  background: #fff;
+  border-bottom: solid 3px #EC261A;
+  position: relative;
+  overflow-y: scroll !important;
+  height: 450px;
+}
+
+body .inPage .prodbox ::-webkit-scrollbar {
+  width: 5px;
+}
+
+body .inPage .prodbox ::-webkit-scrollbar-track {
+  background: #F6F6F6;
+}
+
+body .inPage .prodbox ::-webkit-scrollbar-thumb {
+  background: #EC261A;
+}
+
+body .inPage .prodbox ::-webkit-scrollbar-thumb:hover {
+  background: #171F33;
+}
+
+body .inPage .prodbox .accordion {
+  background-color: #fff;
+}
+
+body .inPage .prodbox .accordion .accordion-item:last-of-type .accordion-button.collapsed {
+  background: #fff !important;
+  color: #000;
+}
+
+body .inPage .prodbox .accordion .accordion-item:last-of-type .accordion-button.collapsed::after {
+  -webkit-filter: brightness(0) saturate(100%);
+          filter: brightness(0) saturate(100%);
+}
+
+body .inPage .prodbox .accordion .accordion-body {
+  background: #F6F6F6;
+  overflow-y: scroll;
+  height: 150px;
+}
+
+body .inPage .prodbox .accordion .accordion-body a {
+  color: #000;
+}
+
+body .inPage .prodbox .accordion .accordion-body img {
+  -webkit-filter: brightness(0) saturate(100%);
+          filter: brightness(0) saturate(100%);
+}
+
+body .inPage .prodbox .accordion .accordion-item {
+  border: none !important;
+  background: #F6F6F6;
+  border-radius: 0;
+}
+
+body .inPage .prodbox .accordion .accordion-item:first-of-type {
+  border-radius: 0;
+}
+
+body .inPage .prodbox .accordion .accordion-item:first-of-type .accordion-button {
+  margin: initial !important;
+}
+
+body .inPage .prodbox .accordion .accordion-item:last-of-type {
+  border-radius: 0;
+}
+
+body .inPage .prodbox .accordion .accordion-item .accordion-button:not(.collapsed) {
+  background: #EC261A !important;
+  color: #fff;
+  padding: 1em;
+}
+
+body .inPage .prodbox .accordion .accordion-item .accordion-button:not(.collapsed)::after {
+  -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+          filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+}
+
+body .inPage .prodbox .accordion .accordion-item .accordion-header {
+  border-radius: 0;
+}
+
+body .inPage .prodbox .accordion .accordion-item .accordion-header .accordion-button {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border-radius: 0;
+  padding: 1em;
+  margin-top: 1em;
+  font-family: "Neue Haas Grotesk Display Pro";
+  font-weight: 600;
+  font-size: 1.5rem;
+  border: none !important;
+}
+
+body .inPage .box-accordion {
+  background: #fff;
+  border-bottom: solid 3px #EC261A;
+  position: relative;
+  top: -50px;
+}
+
+body .inPage .box-accordion .form-control {
+  border: none !important;
+  border-bottom: 2px #F6F6F6 solid !important;
+  resize: none !important;
+}
+
+body .inPage .box-accordion .btn-red {
+  color: #fff;
+}
+
+body .inPage .box-accordion .accordion {
+  background-color: #fff;
+}
+
+body .inPage .box-accordion .accordion .accordion-item:last-of-type .accordion-button.collapsed {
+  background: #EC261A !important;
+  color: #fff;
+}
+
+body .inPage .box-accordion .accordion .accordion-item:last-of-type .accordion-button.collapsed::after {
+  -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+          filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+}
+
+body .inPage .box-accordion .accordion .accordion-body {
+  background: #fff;
+}
+
+body .inPage .box-accordion .accordion .accordion-body a {
+  color: #000;
+}
+
+body .inPage .box-accordion .accordion .accordion-body img {
+  -webkit-filter: brightness(0) saturate(100%);
+          filter: brightness(0) saturate(100%);
+}
+
+body .inPage .box-accordion .accordion .accordion-item {
+  border: none !important;
+  background: #F6F6F6;
+  border-radius: 0;
+}
+
+body .inPage .box-accordion .accordion .accordion-item:first-of-type {
+  border-radius: 0;
+}
+
+body .inPage .box-accordion .accordion .accordion-item:first-of-type .accordion-button {
+  margin: initial !important;
+}
+
+body .inPage .box-accordion .accordion .accordion-item:last-of-type {
+  border-radius: 0;
+}
+
+body .inPage .box-accordion .accordion .accordion-item .accordion-button:not(.collapsed) {
+  background: #fff !important;
+  color: #000;
+  padding: 1em;
+}
+
+body .inPage .box-accordion .accordion .accordion-item .accordion-button:not(.collapsed)::after {
+  -webkit-filter: brightness(0) saturate(100%);
+          filter: brightness(0) saturate(100%);
+}
+
+body .inPage .box-accordion .accordion .accordion-item .accordion-header {
+  border-radius: 0;
+}
+
+body .inPage .box-accordion .accordion .accordion-item .accordion-header .accordion-button {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border-radius: 0;
+  padding: 1em;
+  margin-top: 1em;
+  font-family: "Neue Haas Grotesk Display Pro";
+  font-weight: 600;
+  font-size: 1.5rem;
+  border: none !important;
+}
+
 body .inPage .ln-0 {
   line-height: 0 !important;
 }
@@ -1226,6 +1543,28 @@ body .inPage .ln-0 {
 body .inPage .formArea {
   position: relative;
   padding-top: 2em;
+}
+
+body .inPage .formArea input::-webkit-outer-spin-button,
+body .inPage .formArea input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body .inPage .formArea input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body .inPage .formArea .form-check-input {
+  border-radius: 0;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+body .inPage .formArea .form-check-input:checked {
+  background-color: #EC261A;
+  border: none !important;
 }
 
 body .inPage .formArea .navtainer {
@@ -1255,17 +1594,20 @@ body .inPage .formArea .jp-card-container {
   height: 300px;
 }
 
-body .inPage .formArea .jp-card .jp-card-front, body .inPage .formArea .jp-card .jp-card-back {
+body .inPage .formArea .jp-card .jp-card-front,
+body .inPage .formArea .jp-card .jp-card-back {
   background: url("../materials/logo.png") #D0D2D5;
   background-repeat: no-repeat;
   background-position: 15% 15%;
 }
 
-body .inPage .formArea .jp-card .jp-card-front .jp-card-shiny, body .inPage .formArea .jp-card .jp-card-back .jp-card-shiny {
+body .inPage .formArea .jp-card .jp-card-front .jp-card-shiny,
+body .inPage .formArea .jp-card .jp-card-back .jp-card-shiny {
   background: #232C44;
 }
 
-body .inPage .formArea .jp-card .jp-card-front .jp-card-display, body .inPage .formArea .jp-card .jp-card-back .jp-card-display {
+body .inPage .formArea .jp-card .jp-card-front .jp-card-display,
+body .inPage .formArea .jp-card .jp-card-back .jp-card-display {
   color: #000;
 }
 
@@ -1347,7 +1689,6 @@ body .inPage .formArea:before {
 body .inPage .formArea .box {
   background: #fff;
   border-bottom: solid 3px #EC261A;
-  padding-bottom: 5em !important;
 }
 
 body .inPage .formArea .box .form-control {
@@ -1465,10 +1806,26 @@ body .inPage .p-cover .counter .box .p-vbox {
   background: #fff;
 }
 
-body .inPage .p-cover .counter .box .p-vbox .value, body .inPage .p-cover .counter .box .p-vbox .plus {
+body .inPage .p-cover .counter .box .p-vbox .value,
+body .inPage .p-cover .counter .box .p-vbox .plus,
+body .inPage .p-cover .counter .box .p-vbox .standart {
   font-size: 3.5rem;
   font-family: "Neue Haas Grotesk Display Pro";
   font-weight: 600;
+  color: #000;
+}
+
+body .inPage .p-cover .counter .box .p-vbox .standart {
+  font-size: 2.5rem;
+}
+
+body .inPage .p-cover .counter .box .p-vbox .expand {
+  width: 21px !important;
+  height: auto !important;
+  -webkit-filter: brightness(0) saturate(100%);
+          filter: brightness(0) saturate(100%);
+  position: relative;
+  top: -5px;
 }
 
 body .inPage .p-cover .counter .box .p-vbox .summary {
@@ -1682,6 +2039,152 @@ body .showMeYourPower {
   transition: all 0.5s ease;
 }
 
+body .certificates {
+  position: relative;
+  background: none !important;
+}
+
+body .certificates:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 500px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #232C44;
+  z-index: -1;
+}
+
+body .certificates::before {
+  background: url("../materials/acrobat-w.svg") no-repeat;
+  background-size: contain;
+  background-position: right top;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 500px;
+  right: -50px;
+  top: -250px;
+}
+
+body .certificates .saleteam {
+  position: relative;
+  margin-top: 150px !important;
+}
+
+body .certificates .saleteam .slick-arrow {
+  font-size: 0;
+  width: 50px;
+}
+
+body .certificates .saleteam .slick-next {
+  position: absolute;
+  background: url(../materials/btn-red-f.svg) no-repeat;
+  height: 50px;
+  width: 50px;
+  left: 60px;
+  z-index: 1;
+  top: -100px;
+  background-size: 50px;
+  border: none !important;
+}
+
+body .certificates .saleteam .slick-prev {
+  position: absolute;
+  background: url(../materials/btn-l.svg) no-repeat;
+  height: 50px;
+  width: 50px;
+  z-index: 1;
+  top: -100px;
+  left: 0;
+  background-size: 50px;
+  border: none !important;
+}
+
+body .certificates .saleteam .cutter {
+  overflow: hidden;
+}
+
+body .certificates .saleteam .cutter img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body .certificates .saleteam .col-xl-4 {
+  position: relative;
+  overflow: hidden;
+}
+
+body .certificates .saleteam .col-xl-4:hover {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body .certificates .saleteam .col-xl-4:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body .certificates .saleteam .box {
+  position: relative !important;
+}
+
+body .certificates .saleteam .name {
+  overflow: hidden;
+  background: #171F33;
+  width: 75%;
+  position: absolute;
+  bottom: 0px;
+  padding: 1.5em;
+}
+
+body .certificates .saleteam .name h1 {
+  font-weight: 600;
+  font-family: "Neue Haas Grotesk Display Pro";
+  color: #fff;
+}
+
+body .certificates .saleteam .name .r-line {
+  max-width: 100px;
+  height: 3px;
+  opacity: 1;
+  background: #EC261A;
+  border-color: #EC261A;
+  position: relative;
+  top: -10px;
+  right: 0;
+  margin: 0 !important;
+}
+
+body .certificates .saleteam .personal {
+  position: absolute;
+  top: 25px;
+  left: 15px;
+}
+
+body .certificates .saleteam .personal .btn-red span {
+  font-size: 17px;
+  top: -1px;
+  position: relative;
+}
+
+body .certificates .saleteam .personal .btn-red img {
+  z-index: 999;
+  width: 20px !important;
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
+  top: -3px;
+  left: 1px;
+  position: relative;
+  height: auto;
+  opacity: 1 !important;
+}
+
 body .commercial {
   background: #171F33;
   overflow: hidden;
@@ -1689,6 +2192,10 @@ body .commercial {
 
 body .commercial .title {
   position: relative;
+}
+
+body .commercial .title p {
+  color: #fff;
 }
 
 body .commercial .title .trimpath {
@@ -1948,6 +2455,9 @@ body .topbox_skin_darkroom .topbox_prev:before {
   .header {
     padding-bottom: 1em !important;
   }
+  .certificates::before {
+    display: none !important;
+  }
   .commercial .trimpath {
     font-size: 75px !important;
     top: -80px !important;
@@ -1966,6 +2476,19 @@ body .topbox_skin_darkroom .topbox_prev:before {
   }
   .formArea .b-line {
     width: 50% !important;
+  }
+  .certificates .slick-next {
+    top: -50px !important;
+  }
+  .certificates .slick-prev {
+    top: -50px !important;
+  }
+  .white-bg {
+    top: 0 !important;
+  }
+  .product-details {
+    position: initial !important;
+    text-align: start !important;
   }
 }
 
