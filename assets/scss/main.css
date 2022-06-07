@@ -697,7 +697,7 @@ body .p-sec--1 p {
 body .p-sec--1 .trimpath {
   font-size: 120px;
   margin-top: -90px;
-  left: -120px;
+  left: 0px;
   opacity: 0.2;
   position: absolute;
   -webkit-user-select: none !important;
