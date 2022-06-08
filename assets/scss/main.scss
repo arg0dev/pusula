@@ -153,6 +153,7 @@ $secondary: 'Neue Haas Grotesk Display Pro';
 /* Specified Classes */
 
 * {
+    scroll-behavior: smooth;
     p {
         font-family: $primary;
     }
@@ -436,6 +437,11 @@ body {
         z-index: 1;
         position: relative;
 
+        video {
+            object-fit: cover;
+            width: 100%;
+            height: 100vh;
+        }
 
         .slider--trigger {
             position: relative;
