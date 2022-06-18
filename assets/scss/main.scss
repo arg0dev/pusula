@@ -154,6 +154,7 @@ $secondary: 'Neue Haas Grotesk Display Pro';
 
 * {
     scroll-behavior: smooth;
+
     p {
         font-family: $primary;
     }
@@ -220,6 +221,16 @@ body {
             p {
                 font-size: 1.1rem;
             }
+
+            .warning {
+                font-size: 14px;
+                .backward {
+                    color: $dg;
+                    border-bottom: solid 2px $r;
+                    font-weight: 700;
+                }
+            }
+    
         }
     }
 
@@ -719,11 +730,12 @@ body {
             position: relative;
 
             img {
-                filter: grayscale(1);
                 transition: all 0.3s ease;
+                transform: scale(1);
 
                 &:hover {
                     filter: initial;
+                    transform: scale(1.1);
                 }
             }
 
@@ -771,12 +783,12 @@ body {
             h1 {
                 font-weight: 600;
                 font-family: $secondary;
-                color: $w;
+                color: $dg;
                 font-size: 2.5rem;
             }
 
             p {
-                color: $w;
+                color: $dg;
             }
         }
 
@@ -789,7 +801,7 @@ body {
             bottom: 0;
             right: 0;
             top: 0;
-            background: $dg;
+            background: #f1f1f1;
             opacity: 0.9;
         }
 
@@ -948,23 +960,8 @@ body {
 
         .l-side {
             a {
-                color: $b;
-                border-bottom: solid 1px $dg;
-                padding-bottom: 0.3em;
-                font-weight: 600;
+                color: $w;
                 font-family: $primary;
-                font-size: 1.2rem;
-            }
-
-            &::before {
-                position: absolute;
-                content: "";
-                left: 0;
-                top: 0;
-                width: 500px;
-                height: 150px;
-                background: $lg;
-                z-index: -1;
             }
         }
 
@@ -977,11 +974,12 @@ body {
             .trimpath {
                 font-size: 120px;
                 position: absolute;
-                top: -20px;
+                top: 0px;
                 overflow: hidden;
-                opacity: 0.2;
+                opacity: 0.15;
                 user-select: $clear;
                 right: 0;
+                left: 0;
             }
 
             .r-line {
@@ -1213,11 +1211,12 @@ body {
             }
 
             .service-brands {
-                overflow-x: scroll;
-                width: 100%;
-
                 img {
                     filter: initial !important;
+                }
+
+                a {
+                    overflow: hidden;
                 }
             }
         }
@@ -1225,7 +1224,27 @@ body {
 
     .inPage {
         position: relative;
-
+        .tab-content {
+            position: sticky;
+            top: 140px;
+            .w-box {
+                background: $w;
+                position: relative;
+                top: -100px;
+                padding: 2em;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    height: 30px;
+                    width: 30px;
+                    left: -10px;
+                    right: 0;
+                    top: -10px;
+                    bottom: 0;
+                    background: $r;
+                }
+            }
+        }
         .search-content {
             border-top: solid 1px $lg;
             padding-top: 1em;
@@ -2336,11 +2355,175 @@ body {
         content: url(../materials/big-chev-l.svg);
     }
 
+    .sidebar {
+        border-radius: 0;
+        margin-bottom: 20px;
+        .title {
+            padding: 1em;
+            background: $dg;
+            border-radius: 0;
+            color: $w;
+            font-weight: 500;
+        }
+        li {
+            .submenu {
+                list-style: none; 
+                margin: 0; 
+                padding: 0; 
+                .active {
+                    background: $r !important;
+                    color: $w !important;
+                    font-weight: 500;
+                }
+                .nav-link {
+                    background: $lg;
+                    border-radius: 0;
+                    padding-left: 2em;
+                    padding-right: 2em;
+                    color: $b;
+                }
+            }
+        }
+    }
+
 }
 
 /* Media Querys */
 
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: $w !important;
+}
+
+.navbar .megamenu {
+    padding: 0;
+    a {
+        color: $b;
+        text-align: start !important;
+        font-weight: 500;
+    }
+
+
+    .intab {
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+        a {
+            border-bottom: solid 2px transparent !important;
+            transition: all 0.2s ease;
+            font-size: 14px !important;
+            font-weight: 400;
+            &:hover {
+                border-bottom: solid 2px $r !important;
+                transition: all 0.2s ease;
+                font-weight: 500 !important;
+                .arrow {
+                    transition: all 0.2s ease;
+                    position: relative;
+                    top: -2px;
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                }
+            }
+        }    
+        .arrow {
+            position: relative;
+            top: -2px;
+            opacity: 0;
+            visibility: hidden;
+            margin-left: 5px;
+        }
+    }
+
+    .megaside {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        .active {
+            background: $dg !important;
+            color: $w !important;
+        }
+        .nav-item {
+            display: block !important;
+            min-height: auto !important;
+            &::before {
+                display: $clear;
+            }
+        }
+    
+        .nav-link {
+            display: block !important;
+            min-height: auto !important;
+            padding: 1.5em 2em;
+            background: $lg;
+            margin-left: 0 !important;
+            &::before {
+                display: $clear;
+            }
+        }
+    }
+
+}
+
+
 @media all and (min-width: 300px) and (max-width:1200px) {
+    .megamenu {
+        .col-xl-9 {
+            padding-top: 2em;
+            padding-bottom: 2em;
+        }
+    }
+    .tab-content {
+        .w-box {
+            background: $w;
+            position: relative;
+            top:  0px !important;
+            padding: 2em;
+            &::before {
+                position: absolute;
+                content: "";
+                height: 30px;
+                width: 30px;
+                left: -10px;
+                right: 0;
+                top: -10px;
+                bottom: 0;
+                background: $r;
+            }
+        }
+    }
+    .navbar {
+        .show {
+            min-height: 350px !important;
+        }
+
+        .submiter {
+            top: 70.5% !important;
+        }
+        .nav-item {
+            .dropdown-menu {
+                display: none;
+                width: 100% !important;
+            }
+
+            &:hover {
+                .dropdown-menu {
+                    display: block !important;
+                    border-radius: 0;
+                    border-bottom: solid 2px $r;
+                }
+            }
+        }
+    }
+
+    .collapser-h {
+        height: 0px;
+        overflow-y: scroll !important;
+        .show {
+            min-height: 50px !important;
+        }
+    }
+
     .navbar {
         .dropdown-menu {
             border-radius: 0 !important;
@@ -2373,13 +2556,13 @@ body {
     }
 }
 
-@media all and (min-width: 992px) {
+@media all and (min-width: 1200px) {
     .navbar {
         .nav-item {
             .dropdown-menu {
                 display: none;
                 position: absolute;
-                top: 85px;
+                top: 84px;
             }
 
             &:hover {
@@ -2393,7 +2576,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 992px) {
     .mainSlider {
         .main-pusher {
             .slick-next {
@@ -2533,5 +2716,23 @@ body {
         text-align: start !important;
     }
 }
+
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+
+    .navbar .has-megamenu {
+        position: static !important;
+    }
+
+    .navbar .megamenu {
+        width: 82.5%;
+        left: 0;
+        right: 0;
+        margin: auto !important;
+        margin-top: 0;
+    }
+
+}
+/* ============ desktop view .end// ============ */
 
 /* Media Querys */

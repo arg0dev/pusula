@@ -1,3 +1,14 @@
+var mobileChk = 0;
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && mobileChk == 0 ) {
+  $(".collapser-h .dropdown-toggle").attr("href", "#");
+  mobileChk = 1;
+} else {
+  
+}
+
+
+
+
 $('.main-pusher').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -6,7 +17,8 @@ $('.main-pusher').slick({
     asNavFor: '.img-pusher, .s-pusher',
     autoplay: true,
     fade: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 9900,
+    lazyLoad: 'ondemand',
   });
   
   $('.img-pusher').slick({
@@ -16,22 +28,28 @@ $('.main-pusher').slick({
     asNavFor: '.main-pusher',
     fade: true,
   });
+  
 
-  $('.s-pusher').slick({
-    slidesToShow: 1,
+  $('.service-brands').slick({
+    slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
-    asNavFor: '.main-pusher',
-    fade: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 2000,
+    cssEase: "linear",
   });
-  
 
   $('.references').slick({
     slidesToShow: 7,
     slidesToScroll: 1,
     infinite: true,
     arrows: false,
-    autoplay: 3000,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 7000,
+    cssEase: "linear",
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1201,
@@ -259,6 +277,35 @@ $('.cert').slick({
     // instead of a settings object
   ]
 });
+
+document.addEventListener("DOMContentLoaded", function(){
+  document.querySelectorAll('.sidebar .nav-link').forEach(function(element){
+    
+    element.addEventListener('click', function (e) {
+
+      let nextEl = element.nextElementSibling;
+      let parentEl  = element.parentElement;	
+
+        if(nextEl) {
+            e.preventDefault();	
+            let mycollapse = new bootstrap.Collapse(nextEl);
+            
+            if(nextEl.classList.contains('show')){
+              mycollapse.hide();
+            } else {
+                mycollapse.show();
+                // find other submenus with class=show
+                var opened_submenu = parentEl.parentElement.querySelector('.submenu.show');
+                // if it exists, then close all of them
+                if(opened_submenu){
+                  new bootstrap.Collapse(opened_submenu);
+                }
+            }
+        }
+    }); // addEventListener
+  }) // forEach
+}); 
+// DOMContentLoaded  end
 
 $('.checkout').card({
   container: '.card-wrapper',
