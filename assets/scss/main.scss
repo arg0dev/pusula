@@ -177,6 +177,38 @@ $secondary: 'Neue Haas Grotesk Display Pro';
 }
 
 body {
+    .big {
+        .btn-line {
+            margin-top: 2em;
+        }
+    }
+    .r-box {
+        position: relative;
+        &::before {
+            content: "";
+            left: -30px;
+            width: 30px;
+            height: 30px;
+            background: $r;
+            top: -23px;
+            position: absolute;
+        }
+    }
+
+    .cr-box {
+        position: relative;
+        &::before {
+            content: "";
+            left: -310px;
+            right: 0;
+            margin: auto;
+            width: 30px;
+            height: 30px;
+            background: $r;
+            top: -23px;
+            position: absolute;
+        }
+    }
 
     .header {
         margin-top: 8em;
@@ -820,8 +852,9 @@ body {
             z-index: 1;
             background: $b;
             overflow: hidden;
-
+            filter: grayscale(1);
             &:hover {
+                filter: grayscale(0);
                 transition: height 0.5s cubic-bezier(0, 1, 0, 1);
                 transition: all 0.5s ease;
 
@@ -831,18 +864,6 @@ body {
                     transform: scale(1.2);
                 }
 
-                .description {
-                    height: auto;
-                    max-height: 500px;
-                    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
-                    transition: all 0.5s ease;
-                    padding-bottom: 1em !important;
-
-                    p {
-                        opacity: 1;
-                        transition: all 0.5s ease;
-                    }
-                }
             }
 
             img {
@@ -856,7 +877,7 @@ body {
                 position: absolute;
                 width: 100%;
                 bottom: 0px;
-                max-height: 100px;
+                // max-height: 100px;
                 transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
                 overflow: hidden;
                 left: 0;
@@ -1224,6 +1245,11 @@ body {
 
     .inPage {
         position: relative;
+        .maps {
+            .slick-dots {
+                display: $clear;
+            }
+        }
         .tab-content {
             position: sticky;
             top: 140px;
@@ -2050,6 +2076,7 @@ body {
             width: 500px;
             right: -50px;
             top: -250px;
+            display: none;
         }
 
         .saleteam {
@@ -2239,7 +2266,7 @@ body {
             background: $w;
             position: relative;
             margin-top: 100px;
-            min-height: 500px;
+            min-height: 350px;
             overflow: hidden;
 
             &::before {
@@ -2442,6 +2469,7 @@ body {
         .active {
             background: $dg !important;
             color: $w !important;
+            border-left: 10px solid $r;
         }
         .nav-item {
             display: block !important;
@@ -2467,6 +2495,11 @@ body {
 
 
 @media all and (min-width: 300px) and (max-width:1200px) {
+    .r-box, .cr-box {
+        &::before {
+            display: none;
+        }
+    }
     .megamenu {
         .col-xl-9 {
             padding-top: 2em;

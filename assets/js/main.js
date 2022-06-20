@@ -6,9 +6,6 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   
 }
 
-
-
-
 $('.main-pusher').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -17,7 +14,7 @@ $('.main-pusher').slick({
     asNavFor: '.img-pusher, .s-pusher',
     autoplay: true,
     fade: true,
-    autoplaySpeed: 9900,
+    autoplaySpeed: 10000,
     lazyLoad: 'ondemand',
   });
   
@@ -28,8 +25,15 @@ $('.main-pusher').slick({
     asNavFor: '.main-pusher',
     fade: true,
   });
-  
 
+  $('.maps').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    fade: true,
+  });
+  
   $('.service-brands').slick({
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -128,9 +132,13 @@ counters.forEach( counter => {
 
 $(document).ready(function() {
   $('.lightbox').topbox();
+
+  $('.inPage').on('click', '.accordion-button', function() {
+    var dataadres = $(this).attr('data-adres');
+    var dataharitaId = dataadres - 1;
+    $("#slick-slide-control0"+dataharitaId).click();
+  });
 });
-
-
 
 
 (function ($) {

@@ -163,6 +163,40 @@ body {
   /* Run Forrest Run */
 }
 
+body .big .btn-line {
+  margin-top: 2em;
+}
+
+body .r-box {
+  position: relative;
+}
+
+body .r-box::before {
+  content: "";
+  left: -30px;
+  width: 30px;
+  height: 30px;
+  background: #EC261A;
+  top: -23px;
+  position: absolute;
+}
+
+body .cr-box {
+  position: relative;
+}
+
+body .cr-box::before {
+  content: "";
+  left: -310px;
+  right: 0;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  background: #EC261A;
+  top: -23px;
+  position: absolute;
+}
+
 body .header {
   margin-top: 8em;
   padding: 5em 0;
@@ -849,9 +883,13 @@ body .p-sec--3 .box {
   z-index: 1;
   background: #000;
   overflow: hidden;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
 body .p-sec--3 .box:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
   -webkit-transition: height 0.5s cubic-bezier(0, 1, 0, 1);
   transition: height 0.5s cubic-bezier(0, 1, 0, 1);
   -webkit-transition: all 0.5s ease;
@@ -864,22 +902,6 @@ body .p-sec--3 .box:hover img {
   transition: all 0.5s ease;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-}
-
-body .p-sec--3 .box:hover .description {
-  height: auto;
-  max-height: 500px;
-  -webkit-transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
-  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  padding-bottom: 1em !important;
-}
-
-body .p-sec--3 .box:hover .description p {
-  opacity: 1;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 
 body .p-sec--3 .box img {
@@ -896,7 +918,6 @@ body .p-sec--3 .box .description {
   position: absolute;
   width: 100%;
   bottom: 0px;
-  max-height: 100px;
   -webkit-transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
   transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
   overflow: hidden;
@@ -1256,6 +1277,10 @@ body .modal .col-xl-7 .service-brands a {
 
 body .inPage {
   position: relative;
+}
+
+body .inPage .maps .slick-dots {
+  display: none !important;
 }
 
 body .inPage .tab-content {
@@ -2099,6 +2124,7 @@ body .certificates::before {
   width: 500px;
   right: -50px;
   top: -250px;
+  display: none;
 }
 
 body .certificates .saleteam {
@@ -2291,7 +2317,7 @@ body .e-book .box {
   background: #fff;
   position: relative;
   margin-top: 100px;
-  min-height: 500px;
+  min-height: 350px;
   overflow: hidden;
 }
 
@@ -2499,6 +2525,7 @@ body .sidebar li .submenu .nav-link {
 .navbar .megamenu .megaside .active {
   background: #171F33 !important;
   color: #fff !important;
+  border-left: 10px solid #EC261A;
 }
 
 .navbar .megamenu .megaside .nav-item {
@@ -2523,6 +2550,9 @@ body .sidebar li .submenu .nav-link {
 }
 
 @media all and (min-width: 300px) and (max-width: 1200px) {
+  .r-box::before, .cr-box::before {
+    display: none;
+  }
   .megamenu .col-xl-9 {
     padding-top: 2em;
     padding-bottom: 2em;
