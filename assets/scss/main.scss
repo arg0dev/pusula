@@ -530,12 +530,15 @@ body {
             bottom: 0;
             width: 100%;
             height: 100vh;
-
+            background: $b;
             img {
                 width: 100%;
                 height: 100vh;
                 opacity: 0.5;
                 object-fit: cover !important;
+            }
+            video {
+                opacity: 0.5;
             }
         }
 
@@ -764,7 +767,8 @@ body {
             img {
                 transition: all 0.3s ease;
                 transform: scale(1);
-
+                width: 120px;
+                margin: 20px;
                 &:hover {
                     filter: initial;
                     transform: scale(1.1);
@@ -1234,6 +1238,9 @@ body {
             .service-brands {
                 img {
                     filter: initial !important;
+                    width: 120px;
+                    margin: 20px;
+
                 }
 
                 a {
@@ -2081,7 +2088,7 @@ body {
 
         .saleteam {
             position: relative;
-            margin-top: 150px !important;
+            margin-top: 100px !important;
 
 
             .slick-arrow {

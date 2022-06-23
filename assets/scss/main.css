@@ -517,6 +517,7 @@ body .mainSlider .img-pusher {
   bottom: 0;
   width: 100%;
   height: 100vh;
+  background: #000;
 }
 
 body .mainSlider .img-pusher img {
@@ -525,6 +526,10 @@ body .mainSlider .img-pusher img {
   opacity: 0.5;
   -o-object-fit: cover !important;
      object-fit: cover !important;
+}
+
+body .mainSlider .img-pusher video {
+  opacity: 0.5;
 }
 
 body .mainSlider h1 {
@@ -789,6 +794,8 @@ body .p-sec--2 .references img {
   transition: all 0.3s ease;
   -webkit-transform: scale(1);
           transform: scale(1);
+  width: 120px;
+  margin: 20px;
 }
 
 body .p-sec--2 .references img:hover {
@@ -1269,6 +1276,8 @@ body .modal .col-xl-7 .fastContact span {
 body .modal .col-xl-7 .service-brands img {
   -webkit-filter: initial !important;
           filter: initial !important;
+  width: 120px;
+  margin: 20px;
 }
 
 body .modal .col-xl-7 .service-brands a {
@@ -2129,7 +2138,7 @@ body .certificates::before {
 
 body .certificates .saleteam {
   position: relative;
-  margin-top: 150px !important;
+  margin-top: 100px !important;
 }
 
 body .certificates .saleteam .slick-arrow {

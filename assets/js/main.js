@@ -259,12 +259,14 @@ $('.maps').slick({
   fade: true,
 });
 
+
 $('.cert').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   arrows: true,
   dots: false,
   fade: false,
+  infinite: true,
   responsive: [
     {
       breakpoint: 1201,
